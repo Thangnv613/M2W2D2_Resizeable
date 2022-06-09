@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Square_1 = require("./Square");
+const Circle_1 = require("./Circle");
+const Rectangle_1 = require("./Rectangle");
+let circle = new Circle_1.Circle('Abc', 10);
+let rect = new Rectangle_1.Rectangle(15, 10, 'dad');
+let square = new Square_1.Square('đa', 15);
+let arayShape = [];
+arayShape.push(circle);
+arayShape.push(rect);
+arayShape.push(square);
+arayShape.forEach((arayShape, index) => {
+    console.log(arayShape);
+    console.log(arayShape.calculatePerimeter());
+    console.log(arayShape.calculateArea());
+});
+let percent = Math.random() * 100;
+circle.risize(percent);
+rect.risize(percent);
+square.risize(percent);
